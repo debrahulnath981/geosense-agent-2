@@ -1,8 +1,48 @@
-.env
-data/raw/
-data/shapefiles/
+# ============================================================
+# GeoSense Phase 2 - Large Data / Model Files
+# ============================================================
+
+# Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Jupyter
 .ipynb_checkpoints/
-models/saved/*.pkl
-.vscode/
+
+# Environment / secrets
+.env
+.venv/
+venv/
+
+# ------------------------------------------------------------
+# Large satellite imagery
+# ------------------------------------------------------------
+data/satellite/raw/*.tif
+data/satellite/raw/*.tiff
+data/satellite/raw/*.aux.xml
+
+# ------------------------------------------------------------
+# Large NumPy datasets / chips
+# ------------------------------------------------------------
+data/satellite/chips/*.npy
+data/satellite/clean/*.npy
+data/satellite/labels/*.npy
+
+# ------------------------------------------------------------
+# Large trained models
+# ------------------------------------------------------------
+models/saved/*.pth
+models/saved/*.pt
+models/saved/*.ckpt
+
+# Keep small Phase 1 model
+!models/saved/site_scorer_model.pkl
+
+# ------------------------------------------------------------
+# Temporary / cache files
+# ------------------------------------------------------------
+*.tmp
+*.log
+
+# Hugging Face / model caches
+.cache/
